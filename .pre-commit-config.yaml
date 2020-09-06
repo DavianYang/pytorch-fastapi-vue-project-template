@@ -1,0 +1,31 @@
+default_language_version:
+  python: python3.8
+
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+    -   id: check-yaml
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+
+  - repo: https://github.com/prettier/prettier
+    rev: 2.1.1
+    hooks:
+      - id: prettier
+
+  - repo: https://github.com/timothycrosley/isort
+    rev: 5.4.2
+    hooks:
+      - id: isort
+
+-   repo: https://github.com/psf/black
+    rev: 20.8b1
+    hooks:
+    -   id: black
+        args: [--config=black.toml]
+
+-   repo: https://gitlab.com/pycqa/flake8
+    rev: 3.8.3
+    hooks:
+    -   id: flake8
