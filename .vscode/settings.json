@@ -1,0 +1,8 @@
+{
+    "python.pythonPath": "~/miniconda3/envs/net-env/bin/python",
+    "python.formatting.blackPath": "~/miniconda3/envs/net-env/bin/black",
+    "python.formatting.provider": "black",
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "~/miniconda3/envs/net-env/bin/flake8",
+    "python.sortImports.path": "~/miniconda3/envs/net-env/bin/isort"
+  }
