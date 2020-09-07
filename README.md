@@ -1,1 +1,1 @@
-# pytorch-fastapi-project-template
+# Template Name

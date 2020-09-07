@@ -1,0 +1,22 @@
+version: '3.1'volumes:
+    mongo_data:services:
+  # Main App
+  tancho:
+    build: .
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    volumes:
+      - ./tancho:/tancho
+    ports:
+      - "8000:8000"
+    depends_on:
+        - mongo  # MongoDB as a service
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "tancho_user"
+      MONGO_INITDB_ROOT_PASSWORD: "4dm1n4dm1n"
+    volumes:
+        - mongo_data:/data/db
+    ports:
+      - "27017:27017"
